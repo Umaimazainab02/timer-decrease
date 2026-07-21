@@ -18,3 +18,46 @@ clickbtn.addEventListener("click", function () {
     }, 1000);
 
 });
+
+
+let currentyear = document.getElementById("currentyear");
+let yearbtn = document.getElementById("yearbtn");
+
+yearbtn.addEventListener("click", function () {
+    let date=new Date();
+       document.getElementById("currentyear").innerText = date.getFullYear();
+
+;
+});
+
+
+let currentdate = document.getElementById("currentdate");
+let datebtn = document.getElementById("datebtn");
+
+datebtn.addEventListener("click", function () {
+    let date=new Date();
+       document.getElementById("currentdate").innerText = date.toLocaleDateString();
+
+;
+});
+
+let currentmonth = document.getElementById("currentmonth");
+let monthbtn = document.getElementById("monthbtn");
+
+monthbtn.addEventListener("click", function () {
+    let date=new Date();
+       document.getElementById("currentmonth").innerText = date.getMonth()+1;
+
+;
+});
+
+
+let currentday = document.getElementById("currentday");
+let daybtn = document.getElementById("daybtn");
+
+daybtn.addEventListener("click", function () {
+    let date=new Date();
+       document.getElementById("currentday").innerText = date.getDay();
+
+;
+});
