@@ -109,8 +109,32 @@ clockbtn.addEventListener("click", function () {
         clock.innerText = `${hours}:${minutes}:${seconds}`;
     }
 
-    showTime(); 
+    showTime();
     setInterval(showTime, 1000);
 
-    clockbtn.disabled = true; 
+    clockbtn.disabled = true;
+});
+
+
+
+
+
+let daybtn1 = document.getElementById("daybtn1");
+let showday1 = document.getElementById("showday1");
+
+let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+];
+
+daybtn1.addEventListener("click", function () {
+    let date = new Date();
+    let currentDay = date.getDay();
+
+    showday1.innerText = days[currentDay];
 });
